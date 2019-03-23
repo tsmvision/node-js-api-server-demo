@@ -1,12 +1,15 @@
 import express from 'express';
+import {homeRoute} from './routes/routes';
 
 const app = express();
 
-app.get("/", (req, res) => {
-  res.send({
-    message: "Hello World!"
-  });
-});
+app.use(homeRoute);
+
+// app.get("/", (req, res) => {
+//   res.send({
+//     message: "Hello World!"
+//   });
+// });
 
 const portNumber = 8000;
 
