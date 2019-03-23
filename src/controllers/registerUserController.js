@@ -1,5 +1,5 @@
 import {check, validationResult} from "express-validator/check";
-import errorMessageConverter from '../common/errorMessageConverter';
+import {errorMessageConverter} from '../common';
 
 
 const registerUserControllerValidation = [
