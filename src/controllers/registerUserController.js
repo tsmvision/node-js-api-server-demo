@@ -13,8 +13,7 @@ const registerUserControllerValidation = [
 ];
 
 const registerUserController = (req, res) => {
-  const id = req.body.id;
-  const password = req.body.password;
+  const {id, password} = req.body;
 
   // Finds the validation errors in this request and wraps them in an object with handy functions
   const errors = validationResult(req);
