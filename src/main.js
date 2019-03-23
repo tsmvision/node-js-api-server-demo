@@ -1,4 +1,5 @@
 import express from 'express';
+import cors from 'cors';
 import bodyParser from 'body-parser';
 import {homeRoute, registerUserRoute} from './routes/routes';
 
@@ -9,6 +10,9 @@ const jsonParser = bodyParser.json();
 
 // create application/x-www-form-urlencoded parser
 // const urlencodedParser = bodyParser.urlencoded({extended: false});
+
+// Enabla All CORS Requests
+app.use(cors());
 
 // application/json
 app.use(jsonParser);
