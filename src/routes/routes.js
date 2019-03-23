@@ -1,28 +1,12 @@
 import express from 'express';
+import {homeController, registerUserController} from '../controllers'
 
 
 const router = express.Router();
 
-const homeRoute = router.get("/", (req, res) => {
-  res.status(200).send({
-    message: "Hello World!"
-  });
-});
+const homeRoute = router.get("/", homeController);
 
-const registerUserRoute = router.post("/register-user", (req, res) => {
-  const id = req.body.id;
-  const password = req.body.password;
-
-  // console.log("req.body: ", req.body);
-
-  res.status(201).json({
-    message: "user regisistered successfully",
-    data: {
-      id,
-      password
-    }
-  });
-});
+const registerUserRoute = router.post("/register-user", registerUserController);
 
 export {
   homeRoute,
