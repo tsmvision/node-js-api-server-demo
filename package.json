@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/tsmvision/node-js-api-server-demo#readme",
   "dependencies": {
+    "body-parser": "^1.18.3",
     "esm": "^3.2.20",
     "express": "^4.16.4",
     "nodemon": "^1.18.10"
