@@ -1,8 +1,14 @@
 import {check, validationResult} from "express-validator/check";
 
+
 const registerUserControllerValidation = [
-  check("id").isLength({min: 5}),
-  check("password").isLength({min: 5})
+  check("id")
+    .isLength({min: 5})
+    .withMessage("Id must be at least 5 character long."),
+
+  check("password")
+    .isLength({min: 8})
+    .withMessage("Pass word must be at least 8 character long.")
 ];
 
 const registerUserController = (req, res) => {
@@ -12,10 +18,17 @@ const registerUserController = (req, res) => {
   // Finds the validation errors in this request and wraps them in an object with handy functions
   const errors = validationResult(req);
   if (!errors.isEmpty()) {
-    return res.status(422).json({ errors: errors.array() });
+    const errorMessages = errors.array().map(
+      (item) => {
+        return {
+          value: item.value,
+          msg: item.msg
+        }
+      }
+    );
+    return res.status(422).json({errors: errorMessages});
   }
 
-  // console.log("req.body: ", req.body)
   res.status(201).json({
     message: "user regisistered successfully",
     data: {
