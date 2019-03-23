@@ -1,4 +1,5 @@
 import {check, validationResult} from "express-validator/check";
+import errorMessageConverter from '../common/errorMessageConverter';
 
 
 const registerUserControllerValidation = [
@@ -18,15 +19,7 @@ const registerUserController = (req, res) => {
   // Finds the validation errors in this request and wraps them in an object with handy functions
   const errors = validationResult(req);
   if (!errors.isEmpty()) {
-    const errorMessages = errors.array().map(
-      (item) => {
-        return {
-          value: item.value,
-          msg: item.msg
-        }
-      }
-    );
-    return res.status(422).json({errors: errorMessages});
+    return res.status(422).json({errors: errorMessageConverter(errors)});
   }
 
   res.status(201).json({
