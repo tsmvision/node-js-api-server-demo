@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon ./src/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --watch"
   },
   "repository": {
     "type": "git",
@@ -23,5 +23,8 @@
     "esm": "^3.2.20",
     "express": "^4.16.4",
     "nodemon": "^1.18.10"
+  },
+  "devDependencies": {
+    "jest": "^24.5.0"
   }
 }
