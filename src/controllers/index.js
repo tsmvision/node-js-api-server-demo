@@ -1,7 +1,8 @@
-import homeController from './homeController';
-import registerUserController from './registerUserController';
+import {homeController} from './homeController';
+import {registerUserController, registerUserControllerValidation} from './registerUserController';
 
 export {
   homeController,
-  registerUserController
+  registerUserController,
+  registerUserControllerValidation
 }
