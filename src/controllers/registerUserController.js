@@ -30,7 +30,7 @@ const registerUserController = (req, res) => {
   }
 
   res.status(201).json({
-    message: "user regisistered successfully",
+    message: "The user registered successfully",
     data: {
       id,
       password
