@@ -1,6 +1,5 @@
 import {tokenGenerator} from '../common'
 
-
 const loginController = (req, res) => {
   const {email, password} = req.body;
 
