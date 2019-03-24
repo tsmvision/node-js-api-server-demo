@@ -1,3 +1,4 @@
 node_modules
 /src/.properties.js
+/src/privateKey.js
 ./idea/
