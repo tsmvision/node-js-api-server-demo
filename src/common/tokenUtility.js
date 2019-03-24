@@ -1,5 +1,5 @@
 import jwt from 'jsonwebtoken';
-import privateKey from "../privateKey";
+import privateKey from "../config/privateKey";
 import userRoleGenerator from './userRoleGenerator';
 
 

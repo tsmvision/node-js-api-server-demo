@@ -6,7 +6,7 @@ const loginController = (req, res) => {
   //TODO: check if email exists in the db
   if (email === "lukelee111@gmail.com" && password === "password1") {
     return res.status(200).send({
-      message: `${email} login successfully`,
+      message: `${email} was logged in successfully`,
       token: tokenGenerator({email})
     });
   }
