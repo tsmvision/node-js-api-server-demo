@@ -26,7 +26,7 @@ const tokenAuthenticationController = (req, res) => {
   const emailFromToken = getEmailFromToken(token);
 
   // send updated token
-  res.status(200).send({
+  return res.status(200).send({
     token: tokenGenerator({email: emailFromToken})
   });
 };

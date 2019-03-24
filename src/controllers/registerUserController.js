@@ -19,7 +19,7 @@ const registerUserController = (req, res) => {
     return generateErrorMessageArray(req, res);
   }
 
-  res.status(201).json({
+  return res.status(201).json({
     message: "The user registered successfully",
     token: tokenGenerator({email})
   });
