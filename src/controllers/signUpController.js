@@ -33,10 +33,9 @@ const signUpController = (req, res) => {
 
         // generate new user
         User.create({email: email, password: password})
-          .then( data => data.toJSON())
-          .then( data => {
-            console.log("email: ", data.email);
-            console.log("password: ", data.password);
+          .then( user => {
+            console.log("email: ", user.get("email"));
+            console.log("password: ", user.get("password"));
           });
 
         // send success message with new token
