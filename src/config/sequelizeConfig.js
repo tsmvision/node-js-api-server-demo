@@ -1,10 +1,12 @@
 import {Sequelize} from 'sequelize';
 import dbCredential from './dbCredential';
 
+const {dbName, id, password} = dbCredential;
+
 const sequelize = new Sequelize(
-  dbCredential.db,
-  dbCredential.id,
-  dbCredential.password,
+  dbName,
+  id,
+  password,
   {
     host: "localhost",
     dialect: "mysql",
