@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="02f7b5cc-1d8e-4cc3-9dd8-efb1b9a2cc11" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/controllers/deleteUserController.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/tokenAuthenticationController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/tokenAuthenticationController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/updateUserController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/updateUserController.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/routes.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -46,11 +41,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/controllers/deleteUserController.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="479">
-              <caret line="73" column="52" selection-start-line="73" selection-start-column="52" selection-end-line="73" selection-end-column="52" />
+            <state relative-caret-position="208">
+              <caret line="53" selection-start-line="53" selection-end-line="53" />
               <folding>
                 <element signature="e#0#46#0" expanded="true" />
               </folding>
@@ -70,11 +65,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" selection-start-line="18" selection-end-line="18" />
+            <state relative-caret-position="330">
+              <caret line="22" column="25" lean-forward="true" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
               <folding>
                 <element signature="e#0#30#0" expanded="true" />
               </folding>
@@ -94,8 +89,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/common/tokenUtility.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+            <state relative-caret-position="115">
+              <caret line="27" column="5" lean-forward="true" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
               </folding>
@@ -180,13 +175,13 @@
         <option value="$PROJECT_DIR$/src/controllers/signUpController.js" />
         <option value="$PROJECT_DIR$/src/controllers/homeController.js" />
         <option value="$PROJECT_DIR$/src/models/user.js" />
-        <option value="$PROJECT_DIR$/src/common/tokenUtility.js" />
         <option value="$PROJECT_DIR$/src/controllers/index.js" />
         <option value="$PROJECT_DIR$/src/controllers/tokenAuthenticationController.js" />
-        <option value="$PROJECT_DIR$/src/main.js" />
         <option value="$PROJECT_DIR$/src/controllers/updateUserController.js" />
         <option value="$PROJECT_DIR$/src/routes/routes.js" />
         <option value="$PROJECT_DIR$/src/controllers/deleteUserController.js" />
+        <option value="$PROJECT_DIR$/src/common/tokenUtility.js" />
+        <option value="$PROJECT_DIR$/src/main.js" />
       </list>
     </option>
   </component>
@@ -300,20 +295,6 @@
       <updated>1553361841337</updated>
       <workItem from="1553361843629" duration="22336000" />
       <workItem from="1553397566863" duration="13428000" />
-    </task>
-    <task id="LOCAL-00004" summary="refactor: move &quot;/&quot; route to seperated folder and file.">
-      <created>1553363441046</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1553363441046</updated>
-    </task>
-    <task id="LOCAL-00005" summary="refactor: remove unused codes in the main.js.">
-      <created>1553364164604</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1553364164604</updated>
     </task>
     <task id="LOCAL-00006" summary="feature: setup bodyParser for dummy POST.">
       <created>1553366381057</created>
@@ -644,11 +625,25 @@
       <option name="project" value="LOCAL" />
       <updated>1553462073738</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="feature: create deleteUserController.js and related codes.">
+      <created>1553467524294</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1553467524294</updated>
+    </task>
+    <task id="LOCAL-00054" summary="refactor: re-organize codes in deleteUserController.js and related codes.">
+      <created>1553467953705</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1553467953705</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51495000" />
+    <option name="totallyTimeSpent" value="51975000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
@@ -677,8 +672,6 @@
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="feature: add token decode code and apply to tokenAuthenticationController.js." />
-    <MESSAGE value="refactor: re-format tokenAuthenticationController.js." />
     <MESSAGE value="refactor: add TODO IN routes.js." />
     <MESSAGE value="feature: add login route to related codes." />
     <MESSAGE value="refactor: add jwt creating code with dummy static data in loginController.js." />
@@ -702,7 +695,9 @@
     <MESSAGE value="refactor: set email column to unique in user.js." />
     <MESSAGE value="refactor: improve codes in updateUserController.js." />
     <MESSAGE value="fix: fix a bug which updated values aren't stored to the db." />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: fix a bug which updated values aren't stored to the db." />
+    <MESSAGE value="feature: create deleteUserController.js and related codes." />
+    <MESSAGE value="refactor: re-organize codes in deleteUserController.js and related codes." />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor: re-organize codes in deleteUserController.js and related codes." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/jest.config.js" />
@@ -840,32 +835,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/common/tokenUtility.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/controllers/tokenAuthenticationController.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="16" selection-start-line="16" selection-end-line="22" selection-end-column="3" />
           <folding>
             <element signature="e#0#73#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
-          <folding>
-            <element signature="e#0#30#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -902,10 +877,30 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/controllers/deleteUserController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="479">
-          <caret line="73" column="52" selection-start-line="73" selection-start-column="52" selection-end-line="73" selection-end-column="52" />
+        <state relative-caret-position="208">
+          <caret line="53" selection-start-line="53" selection-end-line="53" />
           <folding>
             <element signature="e#0#46#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/common/tokenUtility.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="27" column="5" lean-forward="true" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="25" lean-forward="true" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#30#0" expanded="true" />
           </folding>
         </state>
       </provider>

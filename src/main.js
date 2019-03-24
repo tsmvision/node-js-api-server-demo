@@ -11,7 +11,7 @@ const jsonParser = bodyParser.json();
 // create application/x-www-form-urlencoded parser
 // const urlencodedParser = bodyParser.urlencoded({extended: false});
 
-// Enabla All CORS Requests
+// Enable All CORS Requests
 app.use(cors());
 
 // application/json
