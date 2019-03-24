@@ -1,3 +1,5 @@
+import {validationResult} from "express-validator/check";
+
 const errorMessageConverter = (errors) => {
   if (!errors) {
     return [];
@@ -12,4 +14,21 @@ const errorMessageConverter = (errors) => {
   );
 };
 
-export default errorMessageConverter;
+const hasValidateError = (req) => {
+  return !validationResult(req).isEmpty();
+};
+
+const generateErrorMessageArray = (req, res) => {
+  const errors = validationResult(req);
+  if (!errors.isEmpty()) {
+    return res.status(422).json({errors: errorMessageConverter(errors)});
+  }
+
+  return null;
+};
+
+export {
+  hasValidateError,
+  errorMessageConverter,
+  generateErrorMessageArray
+};
