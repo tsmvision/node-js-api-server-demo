@@ -68,9 +68,7 @@ const updateUserController = (req, res) => {
       const newLastName = lastName ? lastName : user.lastName;
       // const newPassword = password ? password: user.password;
 
-      return User.update({
-        updatedValue
-      }, {where: {email: emailFromToken}})
+      return User.update(updatedValue, {where: {email: emailFromToken}})
         .then(
           user => {
             return res.status(201).json({
