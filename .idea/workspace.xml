@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="02f7b5cc-1d8e-4cc3-9dd8-efb1b9a2cc11" name="Default Changelist" comment="">
+    <list default="true" id="02f7b5cc-1d8e-4cc3-9dd8-efb1b9a2cc11" name="Default Changelist" comment="refactor: improve codes in updateUserController.js.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/user.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/updateUserController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/updateUserController.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -41,11 +41,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/controllers/updateUserController.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="430">
-              <caret line="76" lean-forward="true" selection-start-line="76" selection-end-line="76" />
+            <state relative-caret-position="384">
+              <caret line="27" column="1" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
               <folding>
                 <element signature="e#0#46#0" expanded="true" />
               </folding>
@@ -80,8 +80,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/common/tokenUtility.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="57" selection-start-line="5" selection-start-column="57" selection-end-line="5" selection-end-column="57" />
+            <state relative-caret-position="285">
+              <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
               </folding>
@@ -122,11 +122,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/models/user.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="129">
-              <caret line="10" column="19" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
+            <state relative-caret-position="354">
+              <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
               <folding>
                 <element signature="e#0#36#0" expanded="true" />
               </folding>
@@ -172,15 +172,15 @@
         <option value="$PROJECT_DIR$/src/controllers/registerUserController.js" />
         <option value="$PROJECT_DIR$/src/controllers/tokenAuthenticationController.js" />
         <option value="$PROJECT_DIR$/src/common/index.js" />
-        <option value="$PROJECT_DIR$/src/common/tokenUtility.js" />
         <option value="$PROJECT_DIR$/src/controllers/loginController.js" />
         <option value="$PROJECT_DIR$/src/controllers/signUpController.js" />
         <option value="$PROJECT_DIR$/src/controllers/homeController.js" />
         <option value="$PROJECT_DIR$/src/controllers/index.js" />
         <option value="$PROJECT_DIR$/src/main.js" />
         <option value="$PROJECT_DIR$/src/routes/routes.js" />
-        <option value="$PROJECT_DIR$/src/controllers/updateUserController.js" />
         <option value="$PROJECT_DIR$/src/models/user.js" />
+        <option value="$PROJECT_DIR$/src/common/tokenUtility.js" />
+        <option value="$PROJECT_DIR$/src/controllers/updateUserController.js" />
       </list>
     </option>
   </component>
@@ -294,13 +294,6 @@
       <updated>1553361841337</updated>
       <workItem from="1553361843629" duration="22336000" />
       <workItem from="1553397566863" duration="13428000" />
-    </task>
-    <task id="LOCAL-00001" summary="initial commit.">
-      <created>1553361936155</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1553361936155</updated>
     </task>
     <task id="LOCAL-00002" summary="feature: add express and esm library.">
       <created>1553362260727</created>
@@ -631,11 +624,25 @@
       <option name="project" value="LOCAL" />
       <updated>1553459451651</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="refactor: set email column to unique in user.js.">
+      <created>1553459523552</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1553459523552</updated>
+    </task>
+    <task id="LOCAL-00050" summary="refactor: improve codes in updateUserController.js.">
+      <created>1553461259334</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1553461259335</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44026000" />
+    <option name="totallyTimeSpent" value="45969000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
@@ -664,8 +671,6 @@
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="refactor: add .properties.js to .gitignore." />
-    <MESSAGE value="feature: create jwt token related functions and modify related codes." />
     <MESSAGE value="feature: create userRoleGenerator.js and apply this to jwtTokenGenerator.js." />
     <MESSAGE value="feature: add token decode code and apply to tokenAuthenticationController.js." />
     <MESSAGE value="refactor: re-format tokenAuthenticationController.js." />
@@ -689,7 +694,9 @@
     <MESSAGE value="refactor: modify message in homeController.js." />
     <MESSAGE value="refactor: rename to addUserController.js and modify related codes." />
     <MESSAGE value="feature: create updateUserController.js and update related codes." />
-    <option name="LAST_COMMIT_MESSAGE" value="feature: create updateUserController.js and update related codes." />
+    <MESSAGE value="refactor: set email column to unique in user.js." />
+    <MESSAGE value="refactor: improve codes in updateUserController.js." />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor: improve codes in updateUserController.js." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/jest.config.js" />
@@ -847,16 +854,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/common/tokenUtility.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="57" selection-start-line="5" selection-start-column="57" selection-end-line="5" selection-end-column="57" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/routes/routes.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
@@ -867,22 +864,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/controllers/updateUserController.js">
+    <entry file="file://$PROJECT_DIR$/src/models/user.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="430">
-          <caret line="76" lean-forward="true" selection-start-line="76" selection-end-line="76" />
+        <state relative-caret-position="354">
+          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
           <folding>
-            <element signature="e#0#46#0" expanded="true" />
+            <element signature="e#0#36#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/models/user.js">
+    <entry file="file://$PROJECT_DIR$/src/common/tokenUtility.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
-          <caret line="10" column="19" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
+        <state relative-caret-position="285">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
           <folding>
-            <element signature="e#0#36#0" expanded="true" />
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controllers/updateUserController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="27" column="1" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
+          <folding>
+            <element signature="e#0#46#0" expanded="true" />
           </folding>
         </state>
       </provider>

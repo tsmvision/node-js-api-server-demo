@@ -10,23 +10,22 @@ import {User} from '../models';
 
 
 const updateUserControllerValidation = [
-    check("email")
-      .isEmail()
-      .withMessage("Id must be at least 5 character long."),
+  check("email")
+    .isEmail()
+    .withMessage("Id must be at least 5 character long."),
 
-    check("firstName")
-      .isLength({min: 1})
-      .withMessage("First Name is required"),
+  check("firstName")
+    .isLength({min: 1})
+    .withMessage("First Name is required"),
 
-    check("lastName")
-      .isLength({min: 1})
-      .withMessage("Last Name is required"),
+  check("lastName")
+    .isLength({min: 1})
+    .withMessage("Last Name is required"),
 
-    check("password")
-      .isLength({min: 8})
-      .withMessage("Pass word must be at least 8 character long.")
-  ]
-;
+  check("password")
+    .isLength({min: 8})
+    .withMessage("Pass word must be at least 8 character long.")
+];
 
 const updateUserController = (req, res) => {
   const token = req.get("Authorization");
@@ -46,8 +45,6 @@ const updateUserController = (req, res) => {
   if (password) {
     updatedValue.password = password;
   }
-
-  // console.log("updatedValue: ", updatedValue);
 
   // if (hasValidateError(req)) {
   //   return generateErrorMessageArray(req, res);
@@ -72,7 +69,7 @@ const updateUserController = (req, res) => {
       // const newPassword = password ? password: user.password;
 
       return User.update({
-       updatedValue
+        updatedValue
       }, {where: {email: emailFromToken}})
         .then(
           user => {
