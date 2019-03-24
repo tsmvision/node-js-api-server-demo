@@ -1,13 +1,13 @@
 import {homeController} from './homeController';
 import {loginController} from './loginController';
-import {registerUserController, registerUserControllerValidation} from './registerUserController';
+import {signUpController, signUpControllerValidation} from './signUpController';
 import {tokenAuthenticationController, tokenAuthenticationControllerValidation} from "./tokenAuthenticationController";
 
 export {
   homeController,
   loginController,
-  registerUserController,
-  registerUserControllerValidation,
+  signUpController,
+  signUpControllerValidation,
   tokenAuthenticationController,
   tokenAuthenticationControllerValidation
 }
