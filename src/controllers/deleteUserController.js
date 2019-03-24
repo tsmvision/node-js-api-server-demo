@@ -47,11 +47,10 @@ const deleteUserController = (req, res) => {
       token: ""
     });
   }
-  //
-  // // if (hasValidateError(req)) {
-  // //   return generateErrorMessageArray(req, res);
-  // // }
-  //
+
+  // if (hasValidateError(req)) {
+  //   return generateErrorMessageArray(req, res);
+  // }
 
   return User
     .findOne({where: {id: id}})
@@ -65,13 +64,13 @@ const deleteUserController = (req, res) => {
       }
       return user
     })
-    .then(() => {
+    .then((user) => {
       return User.destroy({where: {id: id}})
-        .then((user) => {
+        .then((deletedUser) => {
 
-            console.log("user: ", user);
+            const deletedEmail = user.get("email");
             return res.status(201).json({
-              message: `The user Id: ${id} was deleted successfully.`,
+              message: `The user(Id: ${id}, email: ${deletedEmail}) was deleted successfully.`,
               token: tokenGenerator({email: email, firstName: firstName, lastName: lastName})
             });
           }

@@ -24,7 +24,6 @@ const isTokenValid = (token) => {
       console.log("error: ", err);
       return false;
     }
-    console.log("decoded: ", decoded);
     return true;
   });
 };
