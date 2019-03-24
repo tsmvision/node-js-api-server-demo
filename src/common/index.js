@@ -1,6 +1,6 @@
 import {errorMessageConverter, generateErrorMessageArray, hasValidateError} from './errorMessageConverter';
 import {tokenGenerator, isTokenValid, getEmailFromToken} from './tokenUtility';
-import userRoleGenerator from './userRoleGenerator';
+// import userRoleGenerator from './userRoleGenerator';
 
 export {
   hasValidateError,
@@ -9,5 +9,5 @@ export {
   tokenGenerator,
   isTokenValid,
   getEmailFromToken,
-  userRoleGenerator
+  // userRoleGenerator
 };
