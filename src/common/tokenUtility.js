@@ -4,7 +4,6 @@ import userRoleGenerator from './userRoleGenerator';
 
 
 const tokenGenerator = ({email, role}) => {
-
   return jwt.sign(
     {
       email: email,
