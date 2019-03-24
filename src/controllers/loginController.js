@@ -4,7 +4,7 @@ import {User} from '../models';
 const loginController = (req, res) => {
   const {email, password} = req.body;
 
-  User.findOne({
+  return User.findOne({
     where: {
       email: email,
       password: password
