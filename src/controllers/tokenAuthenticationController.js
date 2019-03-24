@@ -1,5 +1,6 @@
 import {tokenGenerator, isTokenValid, getEmailFromToken} from '../common'
 import {check} from "express-validator/check";
+import {User} from '../models';
 
 
 const tokenAuthenticationControllerValidation = [
@@ -14,22 +15,36 @@ const tokenAuthenticationController = (req, res) => {
 
   // check if jwt is valid.
   if (!isTokenValid(token)) {
-    return res.status(200).send({
+    return res.status(400).send({
       message: "token is not valid",
       token: ""
     });
   }
 
-  // check if this email exists in the database
-
   // extract email from token
   const emailFromToken = getEmailFromToken(token);
 
-  // send updated token
-  return res.status(200).send({
-    message: "the token was verified",
-    token: tokenGenerator({email: emailFromToken})
-  });
+  // check if this email exists in the database
+  return User.findOne({
+    where: {
+      email: emailFromToken
+    }
+  }).then(
+    (user) => {
+      // throw error if email in the token doesn't exist in the db.
+      if (!user) {
+        return res.status(400).send({
+          message: "The user in the token is not valid",
+          token: ""
+        });
+      }
+      // send updated token
+      return res.status(200).send({
+        message: "the token was verified",
+        token: tokenGenerator({email: emailFromToken})
+      });
+    }
+  );
 };
 
 export {
