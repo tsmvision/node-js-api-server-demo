@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="02f7b5cc-1d8e-4cc3-9dd8-efb1b9a2cc11" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/models/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/registerUserController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/signUpController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/user.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/loginController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/loginController.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -33,11 +29,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/controllers/signUpController.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="41" column="46" selection-start-line="41" selection-start-column="46" selection-end-line="41" selection-end-column="46" />
+            <state relative-caret-position="720">
+              <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="48" />
               <folding>
                 <element signature="e#0#46#0" expanded="true" />
               </folding>
@@ -66,11 +62,14 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/controllers/loginController.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+            <state relative-caret-position="435">
+              <caret line="29" column="8" lean-forward="true" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="8" />
+              <folding>
+                <element signature="e#0#40#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -163,7 +162,6 @@
         <option value="$PROJECT_DIR$/src/controllers/index.js" />
         <option value="$PROJECT_DIR$/src/main.js" />
         <option value="$PROJECT_DIR$/src/controllers/homeController.js" />
-        <option value="$PROJECT_DIR$/src/controllers/loginController.js" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/config/dbCredential.js" />
         <option value="$PROJECT_DIR$/src/config/sequelizeConfig.js" />
@@ -175,6 +173,7 @@
         <option value="$PROJECT_DIR$/src/routes/routes.js" />
         <option value="$PROJECT_DIR$/src/models/user.js" />
         <option value="$PROJECT_DIR$/src/controllers/signUpController.js" />
+        <option value="$PROJECT_DIR$/src/controllers/loginController.js" />
       </list>
     </option>
   </component>
@@ -287,7 +286,7 @@
       <option name="presentableId" value="Default" />
       <updated>1553361841337</updated>
       <workItem from="1553361843629" duration="22336000" />
-      <workItem from="1553397566863" duration="12493000" />
+      <workItem from="1553397566863" duration="13428000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit.">
       <created>1553361936155</created>
@@ -576,11 +575,25 @@
       <option name="project" value="LOCAL" />
       <updated>1553404892518</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="feature: setup signUpController.js with Sequelize ORM Library.">
+      <created>1553446201832</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1553446201832</updated>
+    </task>
+    <task id="LOCAL-00043" summary="refactor: modify getter in User.create... in signUpController.js in Serialize way.">
+      <created>1553446727874</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1553446727874</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34829000" />
+    <option name="totallyTimeSpent" value="35764000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
@@ -609,8 +622,6 @@
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="refactor: modify error message in the registerUser." />
-    <MESSAGE value="refactor: modify message comment in the registerUser." />
     <MESSAGE value="feature: create .gitignore to exclude node_modules." />
     <MESSAGE value="refactor: remove unused codes in the homeController.js." />
     <MESSAGE value="refactor: extract errorMessage related codes in the registerUserController.js to common/errorMessageConverter.js." />
@@ -634,7 +645,9 @@
     <MESSAGE value="refactor: modify tokenUtility.js." />
     <MESSAGE value="fix: fix tokenUtility when token is invalid." />
     <MESSAGE value="fix: add return in the res.status... when token invalid in tokenAuthenticationController.js." />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: add return in the res.status... when token invalid in tokenAuthenticationController.js." />
+    <MESSAGE value="feature: setup signUpController.js with Sequelize ORM Library." />
+    <MESSAGE value="refactor: modify getter in User.create... in signUpController.js in Serialize way." />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor: modify getter in User.create... in signUpController.js in Serialize way." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/jest.config.js" />
@@ -758,13 +771,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/controllers/loginController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/models/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -792,6 +798,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="377">
+          <caret line="26" column="25" selection-start-line="26" selection-start-column="25" selection-end-line="26" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/models/user.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
@@ -802,19 +815,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
+    <entry file="file://$PROJECT_DIR$/src/controllers/signUpController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="377">
-          <caret line="26" column="25" selection-start-line="26" selection-start-column="25" selection-end-line="26" selection-end-column="25" />
+        <state relative-caret-position="720">
+          <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="48" />
+          <folding>
+            <element signature="e#0#46#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/controllers/signUpController.js">
+    <entry file="file://$PROJECT_DIR$/src/controllers/loginController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="41" column="46" selection-start-line="41" selection-start-column="46" selection-end-line="41" selection-end-column="46" />
+        <state relative-caret-position="435">
+          <caret line="29" column="8" lean-forward="true" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="8" />
           <folding>
-            <element signature="e#0#46#0" expanded="true" />
+            <element signature="e#0#40#0" expanded="true" />
           </folding>
         </state>
       </provider>
