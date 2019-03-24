@@ -1,4 +1,5 @@
 import {validationResult} from "express-validator/check";
+import {isTokenValid} from "./tokenUtility";
 
 const errorMessageConverter = (errors) => {
   if (!errors) {
@@ -27,8 +28,17 @@ const generateErrorMessageArray = (req, res) => {
   return null;
 };
 
+
+const getInvalidTokenErrorMessage = (res) => {
+  return res.status(400).send({
+    message: "token is not valid",
+    token: ""
+  });
+};
+
 export {
   hasValidateError,
   errorMessageConverter,
-  generateErrorMessageArray
+  generateErrorMessageArray,
+  getInvalidTokenErrorMessage
 };

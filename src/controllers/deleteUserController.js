@@ -1,10 +1,10 @@
 import {check} from "express-validator/check";
 import {
-  // generateErrorMessageArray,
   // hasValidateError,
   tokenGenerator,
-  // getDataFromToken,
-  getEmailFromToken, isTokenValid, getDataFromToken
+  isTokenValid,
+  getDataFromToken,
+  getInvalidTokenErrorMessage
 } from '../common';
 import {User} from '../models';
 
@@ -34,10 +34,7 @@ const deleteUserController = (req, res) => {
   const {email, firstName, lastName} = getDataFromToken(token);
 
   if (!isTokenValid(token)) {
-    return res.status(400).send({
-      message: "token is not valid",
-      token: ""
-    });
+    return getInvalidTokenErrorMessage(res);
   }
 
   const {id} = req.params;

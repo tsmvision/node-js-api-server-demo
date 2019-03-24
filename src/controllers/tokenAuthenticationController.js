@@ -1,4 +1,4 @@
-import {tokenGenerator, isTokenValid, getDataFromToken} from '../common'
+import {tokenGenerator, isTokenValid, getDataFromToken, getInvalidTokenErrorMessage} from '../common'
 import {check} from "express-validator/check";
 import {User} from '../models';
 
@@ -16,10 +16,7 @@ const tokenAuthenticationController = (req, res) => {
 
   // check if jwt is valid.
   if (!isTokenValid(token)) {
-    return res.status(400).send({
-      message: "token is not valid",
-      token: ""
-    });
+    return getInvalidTokenErrorMessage(res);
   }
 
   // check if this email exists in the database

@@ -4,7 +4,7 @@ import {
   // hasValidateError,
   tokenGenerator,
   // getDataFromToken,
-  getEmailFromToken, isTokenValid
+  getEmailFromToken, isTokenValid, getInvalidTokenErrorMessage
 } from '../common';
 import {User} from '../models';
 
@@ -32,10 +32,7 @@ const updateUserController = (req, res) => {
 
   // check if jwt is valid.
   if (!isTokenValid(token)) {
-    return res.status(400).send({
-      message: "token is not valid",
-      token: ""
-    });
+    return getInvalidTokenErrorMessage(res);
   }
   
   const emailFromToken = getEmailFromToken(token);
