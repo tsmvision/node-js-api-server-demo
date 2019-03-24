@@ -1,4 +1,4 @@
-import {tokenGenerator, isTokenValid, getEmailFromToken} from '../common'
+import {tokenGenerator, isTokenValid, getDataFromToken} from '../common'
 import {check} from "express-validator/check";
 import {User} from '../models';
 
@@ -12,6 +12,7 @@ const tokenAuthenticationControllerValidation = [
 const tokenAuthenticationController = (req, res) => {
   // get token stored in the request headers.
   const token = req.get("Authorization") ? req.get("Authorization") : "";
+  const {email, firstName, lastName} = getDataFromToken(token);
 
   // check if jwt is valid.
   if (!isTokenValid(token)) {
@@ -21,13 +22,10 @@ const tokenAuthenticationController = (req, res) => {
     });
   }
 
-  // extract email from token
-  const emailFromToken = getEmailFromToken(token);
-
   // check if this email exists in the database
   return User.findOne({
     where: {
-      email: emailFromToken
+      email: email
     }
   }).then(
     (user) => {
@@ -41,7 +39,7 @@ const tokenAuthenticationController = (req, res) => {
       // send updated token
       return res.status(200).send({
         message: "the token was verified",
-        token: tokenGenerator({email: emailFromToken})
+        token: tokenGenerator({email: email, firstName: firstName, lastName: lastName})
       });
     }
   );

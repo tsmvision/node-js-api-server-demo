@@ -6,7 +6,9 @@ import {
   addUserController,
   addUserControllerValidation,
   updateUserController,
-  updateUserControllerValidation,
+  // updateUserControllerValidation,
+  deleteUserController,
+  // deleteUserControllerValidation,
   tokenAuthenticationController,
   tokenAuthenticationControllerValidation
 } from '../controllers'
@@ -16,14 +18,10 @@ const router = express.Router();
 const homeRoute = router.get("/", homeController);
 const loginRoute = router.post("/login", loginController);
 const addUserRoute = router.post("/user", addUserControllerValidation, addUserController);
-// updateUserRoute
-const updateUserRoute = router.patch("/user", updateUserController);
-// deleteuserRoute
-// const deleteUserRoute = router.delete("/user, deleteUserController);
-
+const updateUserRoute = router.put("/user", updateUserController);
+const deleteUserRoute = router.delete("/user/:id", deleteUserController);
 
 const tokenAuthRoute = router.post("/auth", tokenAuthenticationControllerValidation, tokenAuthenticationController);
-
 
 
 export {
@@ -31,5 +29,6 @@ export {
   loginRoute,
   addUserRoute,
   updateUserRoute,
+  deleteUserRoute,
   tokenAuthRoute
 }
