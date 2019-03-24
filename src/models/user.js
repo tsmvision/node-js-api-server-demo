@@ -5,12 +5,26 @@ class User extends Model {
 }
 
 User.init({
-  email: Sequelize.STRING,
-  password: Sequelize.STRING
+  email: {
+    type: Sequelize.STRING,
+    allowNull: false
+  },
+  firstName: {
+    type: Sequelize.STRING,
+    allowNull: false
+  },
+  lastName: {
+    type: Sequelize.STRING,
+    allowNull: false
+  },
+  password: {
+    type: Sequelize.STRING,
+    allowNull: false
+  }
 }, {sequelize});
 
-// sequelize.sync()
-//   .then(() => User.create({
+// sequelize.sync();
+//   .then(() =>; User.create({
 //     email: "luke",
 //     password: "1234"
 //   }))

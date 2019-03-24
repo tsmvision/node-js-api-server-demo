@@ -13,9 +13,14 @@ const loginController = (req, res) => {
     (user) => {
       // check if the user exists.
       if (user) {
+
         return res.status(200).send({
           message: `${email} was logged in successfully`,
-          token: tokenGenerator({email})
+          token: tokenGenerator({
+            email: user.get("email"),
+            firstName: user.get("firstName"),
+            lastName: user.get("lastName"),
+          })
         });
       }
 

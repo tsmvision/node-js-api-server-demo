@@ -3,10 +3,12 @@ import privateKey from "../config/privateKey";
 import userRoleGenerator from './userRoleGenerator';
 
 
-const tokenGenerator = ({email, role}) => {
+const tokenGenerator = ({email, firstName, lastName, role}) => {
   return jwt.sign(
     {
       email: email,
+      firstName: firstName,
+      lastName: lastName,
       role: userRoleGenerator(role),
     }, privateKey);
 };
@@ -31,8 +33,17 @@ const getEmailFromToken = (token) => {
   return emailFromToken ? emailFromToken : "";
 };
 
+const getDataFromToken = (token) => {
+  if (!token) {
+    return null;
+  }
+  const data = jwt.decode(token);
+  return data ? data: {};
+};
+
 export {
   tokenGenerator,
   isTokenValid,
-  getEmailFromToken
+  getEmailFromToken,
+  getDataFromToken
 };
