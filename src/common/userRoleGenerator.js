@@ -1,4 +1,4 @@
-const userRoleGenerator = (role = null) => {
+const userRoleGenerator = (role=null) => {
   switch(role) {
     case role === "admin":
       return "admin";
