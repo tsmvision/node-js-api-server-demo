@@ -1,7 +1,7 @@
 import express from 'express';
 import cors from 'cors';
 import bodyParser from 'body-parser';
-import {homeRoute, loginRoute, registerUserRoute, tokenAuthRoute} from './routes/routes';
+import {homeRoute, loginRoute, addUserRoute, tokenAuthRoute} from './routes/routes';
 
 const app = express();
 
@@ -18,7 +18,7 @@ app.use(cors());
 app.use(jsonParser);
 app.use(homeRoute);
 app.use(loginRoute);
-app.use(registerUserRoute);
+app.use(addUserRoute);
 app.use(tokenAuthRoute);
 
 

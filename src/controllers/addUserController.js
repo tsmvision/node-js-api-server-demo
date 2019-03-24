@@ -3,7 +3,7 @@ import {generateErrorMessageArray, hasValidateError, tokenGenerator} from '../co
 import {User} from '../models';
 
 
-const signUpControllerValidation = [
+const addUserControllerValidation = [
     check("email")
       .isEmail()
       .withMessage("Id must be at least 5 character long."),
@@ -22,7 +22,7 @@ const signUpControllerValidation = [
   ]
 ;
 
-const signUpController = (req, res) => {
+const addUserController = (req, res) => {
   const {email, firstName, lastName, password} = req.body;
 
   if (hasValidateError(req)) {
@@ -54,6 +54,6 @@ const signUpController = (req, res) => {
 };
 
 export {
-  signUpController,
-  signUpControllerValidation
+  addUserController,
+  addUserControllerValidation
 };
