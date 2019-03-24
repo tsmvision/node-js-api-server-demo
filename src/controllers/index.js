@@ -1,11 +1,11 @@
 import {homeController} from './homeController';
 import {registerUserController, registerUserControllerValidation} from './registerUserController';
-import {jwtAuthController, jwtAuthControllerValidation} from "./jwtAuthController";
+import {tokenAuthenticationController, tokenAuthenticationControllerValidation} from "./tokenAuthenticationController";
 
 export {
   homeController,
   registerUserController,
   registerUserControllerValidation,
-  jwtAuthController,
-  jwtAuthControllerValidation
+  tokenAuthenticationController,
+  tokenAuthenticationControllerValidation
 }

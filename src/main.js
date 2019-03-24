@@ -1,7 +1,7 @@
 import express from 'express';
 import cors from 'cors';
 import bodyParser from 'body-parser';
-import {homeRoute, registerUserRoute, jwtAuthRoute} from './routes/routes';
+import {homeRoute, registerUserRoute, tokenAuthRoute} from './routes/routes';
 
 const app = express();
 
@@ -18,7 +18,7 @@ app.use(cors());
 app.use(jsonParser);
 app.use(homeRoute);
 app.use(registerUserRoute);
-app.use(jwtAuthRoute);
+app.use(tokenAuthRoute);
 
 
 const portNumber = 8000;

@@ -1,11 +1,13 @@
 import {errorMessageConverter, generateErrorMessageArray, hasValidateError} from './errorMessageConverter';
-import jwtTokenGenerator from './jwtTokenGenerator';
+import {tokenGenerator, isTokenValid, getEmailFromToken} from './tokenUtility';
 import userRoleGenerator from './userRoleGenerator';
 
 export {
   hasValidateError,
   errorMessageConverter,
   generateErrorMessageArray,
-  jwtTokenGenerator,
+  tokenGenerator,
+  isTokenValid,
+  getEmailFromToken,
   userRoleGenerator
 };

@@ -1,5 +1,5 @@
 import {check} from "express-validator/check";
-import {generateErrorMessageArray, hasValidateError, jwtTokenGenerator} from '../common';
+import {generateErrorMessageArray, hasValidateError, tokenGenerator} from '../common';
 
 
 const registerUserControllerValidation = [
@@ -21,7 +21,7 @@ const registerUserController = (req, res) => {
 
   res.status(201).json({
     message: "The user registered successfully",
-    token: jwtTokenGenerator({email})
+    token: tokenGenerator({email})
   });
 };
 
