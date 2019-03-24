@@ -16,8 +16,6 @@ const loginRoute = router.post("/login", loginController);
 const registerUserRoute = router.post("/register-user", registerUserControllerValidation, registerUserController);
 const tokenAuthRoute = router.post("/auth", tokenAuthenticationControllerValidation, tokenAuthenticationController);
 
-//TODO: ADD login
-
 export {
   homeRoute,
   loginRoute,
