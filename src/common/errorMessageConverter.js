@@ -1,5 +1,5 @@
 import {validationResult} from "express-validator/check";
-import {isTokenValid} from "./tokenUtility";
+
 
 const errorMessageConverter = (errors) => {
   if (!errors) {
