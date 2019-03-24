@@ -12,7 +12,14 @@ const tokenGenerator = ({email, role}) => {
 };
 
 const isTokenValid = (token) => {
-  return jwt.verify(token, privateKey);
+  return jwt.verify(token, privateKey, (err, decoded) => {
+    if (err) {
+      console.log("error: ", err);
+      return false;
+    }
+    console.log("decoded: ", decoded);
+    return true;
+  });
 };
 
 const getEmailFromToken = (token) => {

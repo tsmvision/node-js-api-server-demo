@@ -18,6 +18,8 @@ const tokenAuthenticationController = (req, res) => {
       message: "token is not valid",
       token: ""
     });
+  } else {
+
   }
 
   // check if this email exists in the database
