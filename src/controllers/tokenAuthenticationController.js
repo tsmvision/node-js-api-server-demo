@@ -14,12 +14,10 @@ const tokenAuthenticationController = (req, res) => {
 
   // check if jwt is valid.
   if (!isTokenValid(token)) {
-    res.status(200).send({
+    return res.status(200).send({
       message: "token is not valid",
       token: ""
     });
-  } else {
-
   }
 
   // check if this email exists in the database

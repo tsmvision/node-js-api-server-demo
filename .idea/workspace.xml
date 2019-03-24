@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="02f7b5cc-1d8e-4cc3-9dd8-efb1b9a2cc11" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/common/tokenUtility.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/tokenUtility.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/tokenAuthenticationController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/tokenAuthenticationController.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -20,8 +20,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/controllers/tokenAuthenticationController.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" column="3" lean-forward="true" selection-start-line="20" selection-start-column="3" selection-end-line="20" selection-end-column="3" />
+            <state relative-caret-position="315">
+              <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
               <folding>
                 <element signature="e#0#73#0" expanded="true" />
               </folding>
@@ -62,8 +62,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/common/tokenUtility.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="43" selection-start-line="5" selection-start-column="43" selection-end-line="5" selection-end-column="43" />
+            <state relative-caret-position="255">
+              <caret line="17" column="19" lean-forward="true" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
               </folding>
@@ -163,8 +163,8 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/config/dbCredential.js" />
         <option value="$PROJECT_DIR$/src/config/sequelizeConfig.js" />
-        <option value="$PROJECT_DIR$/src/controllers/tokenAuthenticationController.js" />
         <option value="$PROJECT_DIR$/src/common/index.js" />
+        <option value="$PROJECT_DIR$/src/controllers/tokenAuthenticationController.js" />
         <option value="$PROJECT_DIR$/src/common/tokenUtility.js" />
       </list>
     </option>
@@ -272,7 +272,7 @@
       <option name="presentableId" value="Default" />
       <updated>1553361841337</updated>
       <workItem from="1553361843629" duration="22336000" />
-      <workItem from="1553397566863" duration="5964000" />
+      <workItem from="1553397566863" duration="6972000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit.">
       <created>1553361936155</created>
@@ -540,11 +540,25 @@
       <option name="project" value="LOCAL" />
       <updated>1553403825788</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="refactor: modify tokenUtility.js.">
+      <created>1553403865260</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1553403865260</updated>
+    </task>
+    <task id="LOCAL-00040" summary="fix: fix tokenUtility when token is invalid.">
+      <created>1553404756708</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1553404756708</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28300000" />
+    <option name="totallyTimeSpent" value="29308000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -573,8 +587,6 @@
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="refactor: extract controller functions in the routes to separated function and save to controllers." />
-    <MESSAGE value="feature: add Jest and create dummy test.test.js file." />
     <MESSAGE value="feature: add express-validator and sample validator in the registerUser." />
     <MESSAGE value="refactor: modify error message in the registerUser." />
     <MESSAGE value="refactor: modify message comment in the registerUser." />
@@ -598,7 +610,9 @@
     <MESSAGE value="refactor: rename element name in the object in dbCredentials.js and related files." />
     <MESSAGE value="refactor: add message when authentication success in the tokenAuthenticationController.js." />
     <MESSAGE value="refactor: comment unused codes in the common/index.js." />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor: comment unused codes in the common/index.js." />
+    <MESSAGE value="refactor: modify tokenUtility.js." />
+    <MESSAGE value="fix: fix tokenUtility when token is invalid." />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: fix tokenUtility when token is invalid." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/jest.config.js" />
@@ -722,16 +736,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/controllers/tokenAuthenticationController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="3" lean-forward="true" selection-start-line="20" selection-start-column="3" selection-end-line="20" selection-end-column="3" />
-          <folding>
-            <element signature="e#0#73#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/controllers/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -759,10 +763,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/controllers/tokenAuthenticationController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+          <folding>
+            <element signature="e#0#73#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/common/tokenUtility.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="43" selection-start-line="5" selection-start-column="43" selection-end-line="5" selection-end-column="43" />
+        <state relative-caret-position="255">
+          <caret line="17" column="19" lean-forward="true" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
           </folding>
