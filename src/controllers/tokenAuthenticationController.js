@@ -27,6 +27,7 @@ const tokenAuthenticationController = (req, res) => {
 
   // send updated token
   return res.status(200).send({
+    message: "the token was verified",
     token: tokenGenerator({email: emailFromToken})
   });
 };
