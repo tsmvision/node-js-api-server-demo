@@ -1,9 +1,9 @@
 import {check} from "express-validator/check";
 import {
-  generateErrorMessageArray,
-  hasValidateError,
+  // generateErrorMessageArray,
+  // hasValidateError,
   tokenGenerator,
-  getDataFromToken,
+  // getDataFromToken,
   getEmailFromToken
 } from '../common';
 import {User} from '../models';
@@ -33,6 +33,22 @@ const updateUserController = (req, res) => {
   const emailFromToken = getEmailFromToken(token);
   const {email, firstName, lastName, password} = req.body;
 
+  const updatedValue = {};
+  if (email) {
+    updatedValue.email = email;
+  }
+  if (firstName) {
+    updatedValue.firstName = firstName;
+  }
+  if (lastName) {
+    updatedValue.lastName = lastName;
+  }
+  if (password) {
+    updatedValue.password = password;
+  }
+
+  // console.log("updatedValue: ", updatedValue);
+
   // if (hasValidateError(req)) {
   //   return generateErrorMessageArray(req, res);
   // }
@@ -47,24 +63,19 @@ const updateUserController = (req, res) => {
           token: ""
         });
       }
-
       return user
     })
-    .then(user => {
+    .then((user) => {
       const newEmail = email ? email : emailFromToken;
       const newFirstName = firstName ? firstName : user.firstName;
       const newLastName = lastName ? lastName : user.lastName;
-      const newPassword = password ? password : user.password;
+      // const newPassword = password ? password: user.password;
 
       return User.update({
-        email: newEmail,
-        firstName: newFirstName,
-        lastName: newLastName,
-        password: newPassword
+       updatedValue
       }, {where: {email: emailFromToken}})
         .then(
           user => {
-            console.log("updated user: ", user);
             return res.status(201).json({
               message: `The user: ${email} was updated successfully.`,
               token: tokenGenerator({email: newEmail, firstName: newFirstName, lastName: newLastName})

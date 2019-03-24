@@ -4,6 +4,11 @@ import userRoleGenerator from './userRoleGenerator';
 
 
 const tokenGenerator = ({email, firstName, lastName, role}) => {
+  if (!email || !firstName || !lastName) {
+    console.log("insufficient parameters in tokenGenerator.")
+    return ""
+  }
+
   return jwt.sign(
     {
       email: email,
