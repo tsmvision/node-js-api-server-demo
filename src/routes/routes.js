@@ -21,7 +21,7 @@ const addUserRoute = router.post("/user", addUserControllerValidation, addUserCo
 const updateUserRoute = router.put("/user", updateUserController);
 const deleteUserRoute = router.delete("/user/:id", deleteUserController);
 
-const tokenAuthRoute = router.post("/auth", tokenAuthenticationControllerValidation, tokenAuthenticationController);
+const tokenAuthRoute = router.get("/auth", tokenAuthenticationControllerValidation, tokenAuthenticationController);
 
 
 export {
