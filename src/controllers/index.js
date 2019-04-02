@@ -4,6 +4,7 @@ import {addUserController, addUserControllerValidation} from './addUserControlle
 import {updateUserController, updateUserControllerValidation} from "./updateUserController";
 import {deleteUserController, deleteUserControllerValidation} from "./deleteUserController";
 import {tokenAuthenticationController, tokenAuthenticationControllerValidation} from "./tokenAuthenticationController";
+import {getDashboardDataController} from './getDashboardDataController';
 
 export {
   homeController,
@@ -15,5 +16,6 @@ export {
   deleteUserController,
   deleteUserControllerValidation,
   tokenAuthenticationController,
-  tokenAuthenticationControllerValidation
+  tokenAuthenticationControllerValidation,
+  getDashboardDataController
 }

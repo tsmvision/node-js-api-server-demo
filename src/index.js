@@ -5,7 +5,7 @@
 import express from 'express';
 import cors from 'cors';
 import bodyParser from 'body-parser';
-import {homeRoute, loginRoute, addUserRoute, updateUserRoute, deleteUserRoute, tokenAuthRoute} from './routes/routes';
+import {homeRoute, loginRoute, addUserRoute, updateUserRoute, deleteUserRoute, tokenAuthRoute, getDashboardDataRoute} from './routes/routes';
 
 const app = express();
 
@@ -27,6 +27,7 @@ app.use(addUserRoute);
 app.use(updateUserRoute);
 app.use(deleteUserRoute);
 app.use(tokenAuthRoute);
+app.use(getDashboardDataRoute);
 
 
 const portNumber = 8000;

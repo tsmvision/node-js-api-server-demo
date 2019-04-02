@@ -10,7 +10,8 @@ import {
   deleteUserController,
   // deleteUserControllerValidation,
   tokenAuthenticationController,
-  tokenAuthenticationControllerValidation
+  tokenAuthenticationControllerValidation,
+  getDashboardDataController
 } from '../controllers'
 
 const router = express.Router();
@@ -20,6 +21,7 @@ const loginRoute = router.post("/login", loginController);
 const addUserRoute = router.post("/user", addUserControllerValidation, addUserController);
 const updateUserRoute = router.put("/user", updateUserController);
 const deleteUserRoute = router.delete("/user/:id", deleteUserController);
+const getDashboardDataRoute = router.get("/dashboard", getDashboardDataController);
 
 const tokenAuthRoute = router.get("/auth", tokenAuthenticationControllerValidation, tokenAuthenticationController);
 
@@ -30,5 +32,6 @@ export {
   addUserRoute,
   updateUserRoute,
   deleteUserRoute,
-  tokenAuthRoute
+  tokenAuthRoute,
+  getDashboardDataRoute
 }
