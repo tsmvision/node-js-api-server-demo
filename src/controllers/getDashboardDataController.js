@@ -8,7 +8,14 @@ import {
 } from '../common';
 // import {User} from '../models';
 
-import {allServicesData, recentlyVisitedServicesData, buildASolutionData, learntoBuildData} from '../common/data';
+import {
+  allServicesData,
+  recentlyVisitedServicesData,
+  buildASolutionData,
+  learntoBuildData,
+  exploreAWSData,
+  accessResourcesOnTheGoData
+} from '../common/data';
 
 
 // const addUserControllerValidation = [
@@ -34,6 +41,8 @@ const getDashboardDataController = (req, res) => {
   // check if jwt is valid.
   const token = req.get("Authorization");
 
+  console.log("token: ", token);
+
   // check if jwt is valid.
   if (!isTokenValid(token)) {
     return getInvalidTokenErrorMessage(res);
@@ -48,7 +57,9 @@ const getDashboardDataController = (req, res) => {
       allServices: allServicesData,
       recentlyVisitedServices: recentlyVisitedServicesData,
       buildASolution: buildASolutionData,
-      learnToBuild: learntoBuildData
+      learnToBuild: learntoBuildData,
+      exploreAWS: exploreAWSData,
+      accessResourcesOnTheGo: accessResourcesOnTheGoData
     }
   );
 
