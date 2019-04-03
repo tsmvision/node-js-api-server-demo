@@ -15,7 +15,7 @@ const tokenGenerator = ({email, firstName, lastName, role}) => {
       firstName: firstName,
       lastName: lastName,
       role: userRoleGenerator(role),
-    }, privateKey);
+    }, privateKey, {expiresIn: 60 * 30});
 };
 
 const isTokenValid = (token) => {
